@@ -5,3 +5,12 @@ Alimento 1
 Nuevo alimento
 
     Preparacion nueva
+
+Tacos al pastor
+
+    Los tacos al pastor son uno de los platillos más emblemáticos de la gastronomía 
+    mexicana, y su éxito radica en la calidad y selección de sus ingredientes. Desde
+    la carne hasta los acompañamientos, cada componente juega un papel crucial en la
+    creación de esta deliciosa experiencia culinaria. En esta sección, exploraremos a
+    fondo los ingredientes clave que hacen de los tacos al pastor un platillo
+    irresistible.
