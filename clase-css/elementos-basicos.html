@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elementos básicos de CSS</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 24px;
+        color: #0b2b17;
+      }
+      h1 {
+        color: #1e6f32;
+        margin-bottom: 8px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 360px;
+        gap: 18px;
+        align-items: start;
+      }
+      .section {
+        background: #f7f9f7;
+        padding: 16px;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+      }
+      .demo {
+        padding: 14px;
+        background: #fff;
+        border-radius: 6px;
+        border: 1px dashed #e6efe6;
+        margin-bottom: 8px;
+      }
+      .label {
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #0a4a24;
+      }
+      pre {
+        background: #fff;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+      }
+      code {
+        font-family: Consolas, monospace;
+        font-size: 13px;
+        display: block;
+        white-space: pre;
+      }
+      .example-title {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+      .code-wrapper {
+        position: sticky;
+        top: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Elementos básicos de CSS — Demo visual</h1>
+    <p>
+      Muestra el efecto de cada propiedad junto al fragmento de código CSS
+      usado.
+    </p>
+
+    <div class="grid">
+      <div>
+        <section class="section">
+          <div class="example-title">Tipografía y texto</div>
+
+          <div class="label">color</div>
+          <div class="demo" style="color: #c0392b">
+            Este texto utiliza <strong>color: red;</strong>
+          </div>
+
+          <div class="label">font-size</div>
+          <div class="demo" style="font-size: 24px">Fuente grande (24px)</div>
+
+          <div class="label">font-family</div>
+          <div
+            class="demo"
+            style="font-family: Georgia, &quot;Times New Roman&quot;, serif"
+          >
+            Ejemplo con fuente serif (Georgia)
+          </div>
+
+          <div class="label">font-weight</div>
+          <div class="demo" style="font-weight: 700">
+            Texto con font-weight: 700 (negrita)
+          </div>
+
+          <div class="label">text-decoration</div>
+          <div class="demo" style="text-decoration: underline">
+            Texto con subrayado
+          </div>
+
+          <div class="label">text-align</div>
+          <div class="demo" style="text-align: center">
+            Centrado (text-align: center)
+          </div>
+
+          <div class="label">line-height</div>
+          <div class="demo" style="line-height: 2">
+            Ejemplo con line-height: 2 — más espacio entre líneas.<br />Segunda
+            línea de ejemplo.
+          </div>
+
+          <div class="label">background-color</div>
+          <div class="demo" style="background-color: #fffbdd">
+            Fondo claro usando background-color
+          </div>
+
+          <div class="label">opacity</div>
+          <div class="demo" style="opacity: 0.7">Caja con opacity: 0.7</div>
+        </section>
+
+        <section class="section" style="margin-top: 18px">
+          <div class="example-title">Box model y visuales</div>
+
+          <div class="label">margin</div>
+          <div class="demo" style="margin: 20px">
+            Caja con margin: 20px (espacio exterior)
+          </div>
+
+          <div class="label">padding</div>
+          <div class="demo" style="padding: 24px">
+            Caja con padding: 24px (espacio interno)
+          </div>
+
+          <div class="label">width</div>
+          <div class="demo" style="width: 300px">width: 300px</div>
+
+          <div class="label">height</div>
+          <div
+            class="demo"
+            style="
+              height: 120px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            height: 120px
+          </div>
+
+          <div class="label">border</div>
+          <div class="demo" style="border: 3px solid #2b6cb0">
+            border: 3px solid #2b6cb0
+          </div>
+
+          <div class="label">border-radius</div>
+          <div class="demo" style="border-radius: 16px">
+            border-radius: 16px
+          </div>
+
+          <div class="label">box-shadow</div>
+          <div
+            class="demo"
+            style="box-shadow: 2px 6px 18px rgba(0, 0, 0, 0.12)"
+          >
+            box-shadow: 2px 6px 18px rgba(0, 0, 0, 0.12)
+          </div>
+
+          <div class="label">display</div>
+          <div
+            class="demo"
+            style="display: inline-block; border: 1px solid #ccc"
+          >
+            display: inline-block
+          </div>
+        </section>
+      </div>
+
+      <aside class="code-wrapper">
+        <div class="section">
+          <div class="label">Código usado (CSS)</div>
+          <pre><code>/* color */
+color: #c0392b;
+
+/* font-size */
+font-size: 24px;
+
+/* font-family */
+font-family: Georgia, 'Times New Roman', serif;
+
+/* font-weight */
+font-weight: 700;
+
+/* text-decoration */
+text-decoration: underline;
+
+/* text-align */
+text-align: center;
+
+/* line-height */
+line-height: 2;
+
+/* background-color */
+background-color: #fffbdd;
+
+/* opacity */
+opacity: 0.7;
+
+/* margin */
+margin: 20px;
+
+/* padding */
+padding: 24px;
+
+/* width */
+width: 300px;
+
+/* height */
+height: 120px;
+
+/* border */
+border: 3px solid #2b6cb0;
+
+/* border-radius */
+border-radius: 16px;
+
+/* box-shadow */
+box-shadow: 2px 6px 18px rgba(0,0,0,0.12);
+
+/* display */
+display: inline-block;
+          </code></pre>
+        </div>
+
+        <div class="section" style="margin-top: 12px">
+          <div class="label">Cómo usar</div>
+          <p>
+            Copien el CSS del atributo <strong>style</strong> en el elemento
+            HTML que deseen modificar.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>

@@ -4,9 +4,64 @@
     <!-- este es un comentario -->
     <meta charset="utf-8" />
     <title>Mi primera página web</title>
+    <style>
+      body {
+        background-color: rgb(192, 198, 83);
+      }
+
+      h1 {
+        color: white;
+        background-color: black;
+      }
+
+      p {
+        color: rgb(255, 0, 187);
+      }
+      /*
+este es un comentario de varias líneas
+*/
+      .fondo-verde {
+        background-color: rgb(146, 242, 146);
+      }
+
+      #titulo-principal {
+        font-size: 24px;
+        font-weight: bold;
+        color: gray;
+      }
+
+      div {
+        background-color: red;
+        color: white;
+      }
+
+      .margen-arriba {
+        margin-top: 100px;
+        color: blue;
+      }
+
+      .margen-izquierdo {
+        margin-left: 50px;
+        color: yellow;
+      }
+
+      .espacio-interno {
+        padding: 30px;
+      }
+    </style>
   </head>
   <body>
-    <h1>¡Hola Mundo!</h1>
-    <p>Esta es mi primera página web.</p>
+    <!-- TEXTO -->
+    <h1>Titulo 1</h1>
+    <p>Primer párrafo</p>
+    <div class="espacio-interno margen-izquierdo margen-arriba">
+      <h2>Primer apartado</h2>
+      <p>Primer párrafo</p>
+      <p>Esta es mi primera página web.</p>
+    </div>
+    <div class="espacio-interno margen-arriba margen-izquierdo">
+      <p>Estoy agregando CSS.</p>
+      <p class="fondo-verde">Probando más etiquetas.</p>
+    </div>
   </body>
 </html>
