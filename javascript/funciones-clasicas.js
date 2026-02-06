@@ -2,8 +2,6 @@ function saludar(nombre) {
   return "Hola, " + nombre;
 }
 
-console.log("Resultado", sumar(1, 2)); // sumar
-
 function sumar(a, b) {
   return a + b;
 }
