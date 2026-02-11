@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos</title>
+  </head>
+  <body>
+    <button onclick="saludar()">Saludar</button>
+
+    <button onclick="mostrarMensaje()">Mostrar Mensaje</button>
+    <p id="mensaje"></p>
+
+    <button onclick="cambiarColor()">Cambiar Color</button>
+
+    <script>
+      function saludar() {
+        alert("¡Hola! Has hecho clic en el botón.");
+      }
+
+      function mostrarMensaje() {
+        const mensajeElemento = document.getElementById("mensaje");
+        mensajeElemento.textContent = "¡Has hecho clic en el botón!";
+      }
+
+      function cambiarColor() {
+        // cambiar el color del mensaje a color rojo
+        const mensajeElemento = document.getElementById("mensaje");
+        mensajeElemento.style.color = "red";
+      }
+    </script>
+  </body>
+</html>
