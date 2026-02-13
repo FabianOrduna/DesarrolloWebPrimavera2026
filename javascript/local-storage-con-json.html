@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON en local storage</title>
+  </head>
+  <body>
+    <button onclick="guardarDatos()">Guardar Datos</button>
+
+    <button onclick="muestraMensaje()">Mostrar Datos</button>
+
+    <script>
+      function guardarDatos() {
+        const profesor = {
+          nombre: "Fabián",
+          materia: "Desarrollo Web",
+        };
+
+        console.log(profesor);
+
+        localStorage.setItem("profesor", profesor);
+        localStorage.setItem("profesor_transformado", JSON.stringify(profesor));
+      }
+
+      function muestraMensaje() {
+        const profesor = localStorage.getItem("profesor");
+        console.log(profesor);
+
+        const profesorTransformado = localStorage.getItem(
+          "profesor_transformado",
+        );
+        console.log(profesorTransformado);
+        const profesorJSON = JSON.parse(profesorTransformado);
+        console.log(profesorJSON);
+        console.log("Materia", profesorJSON.materia);
+      }
+    </script>
+  </body>
+</html>
