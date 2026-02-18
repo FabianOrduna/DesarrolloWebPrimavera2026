@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artistas Spotify</title>
+  </head>
+  <body>
+    <script>
+      function obtenerArtista() {
+        const parametros = {
+          method: "GET",
+          headers: {
+            Authorization:
+              "Bearer BQAOsxcN73a8l4YLYEUOKZu71E9FSr2oHqy0ah27tnztlfTqH0Vn5nvcvfc5BEO8aMdixrvi9pkd9fWHjY3S0k43q-7j67zYDbOGbXB80X4X9rx_ksDEGIsotCMZvysshcREy7-MW6M",
+          },
+        };
+
+        fetch(
+          "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+          parametros,
+        );
+      }
+
+      obtenerArtista();
+    </script>
+  </body>
+</html>
