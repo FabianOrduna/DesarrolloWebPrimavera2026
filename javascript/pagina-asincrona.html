@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asincronía</title>
+  </head>
+  <body>
+    <script>
+      fetch("salon.json")
+        .then((respuesta) => {
+          // primero imprimimos la respuesta completa
+          console.log(respuesta);
+
+          // obtenemos los datos en formato JSON
+          return respuesta.json();
+        })
+        .then((datos) => {
+          // imprimimos los datos obtenidos
+          console.log(datos);
+        })
+        .catch((error) => {
+          console.log("Ocurrió un error al obtener los datos:", error);
+        });
+    </script>
+  </body>
+</html>

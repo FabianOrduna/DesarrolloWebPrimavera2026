@@ -1,0 +1,10 @@
+{
+  "profesor": {
+    "nombre": "Fabián",
+    "intereses_profesionales": [
+      "Desarrollo de Sofware",
+      "Inteligencia Artificial",
+      "Educación"
+    ]
+  }
+}
