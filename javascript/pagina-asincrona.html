@@ -6,6 +6,8 @@
     <title>Asincronía</title>
   </head>
   <body>
+    <div id="contenedor-llamada"></div>
+
     <script>
       fetch("salon.json")
         .then((respuesta) => {
@@ -18,6 +20,38 @@
         .then((datos) => {
           // imprimimos los datos obtenidos
           console.log(datos);
+          // seleccionamos el contenedor donde mostraremos la información
+          const contenedor = document.getElementById("contenedor-llamada");
+          contenedor.textContent = JSON.stringify(datos);
+
+          // creamos nodo de JavaScript
+          const nodo = document.createElement("p");
+          nodo.textContent = datos.profesor.nombre;
+          nodo.style.color = "green";
+          console.dir(nodo);
+          // agregamos el nodo al contenedor
+          contenedor.appendChild(nodo);
+
+          // nodo para intereses profesionales
+          const elementoDeLista1 = document.createElement("li");
+          elementoDeLista1.textContent =
+            datos.profesor.intereses_profesionales[0];
+
+          const elementoDeLista2 = document.createElement("li");
+          elementoDeLista2.textContent =
+            datos.profesor.intereses_profesionales[1];
+
+          const elementoDeLista3 = document.createElement("li");
+          elementoDeLista3.textContent =
+            datos.profesor.intereses_profesionales[2];
+
+          const lista = document.createElement("ul");
+          lista.appendChild(elementoDeLista1);
+          lista.appendChild(elementoDeLista2);
+          lista.appendChild(elementoDeLista3);
+
+          // agregamos el nodo al contenedor
+          contenedor.appendChild(lista);
         })
         .catch((error) => {
           console.log("Ocurrió un error al obtener los datos:", error);
