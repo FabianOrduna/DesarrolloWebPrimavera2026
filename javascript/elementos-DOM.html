@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elementos DOM</title>
+  </head>
+  <body>
+    <h1
+      id="titulo"
+      style="
+        color: red;
+        cursor: copy;
+        background-color: aqua;
+        display: inline-block;
+      "
+    >
+      Día ITAM
+    </h1>
+    <p id="info-principal">
+      Día ITAM Virtual es un evento donde alumnos de preparatoria tienen la
+      oportunidad de conocer a fondo las diversas carreras que ofrece el ITAM.
+      Durante este evento, los directores de cada carrera brindarán pláticas
+      informativas y dinámicas, compartiendo detalles sobre los planes de
+      estudio, las oportunidades académicas y profesionales, así como la
+      filosofía educativa que caracteriza a la universidad. Los asistentes
+      podrán interactuar directamente con los directores, plantear preguntas y
+      aclarar dudas, lo que les permitirá tomar decisiones informadas sobre su
+      futuro académico. Día ITAM Virtual es un evento donde alumnos de
+      preparatoria tienen la oportunidad de conocer a fondo las diversas
+      carreras que ofrece el ITAM. Durante este evento, los directores de cada
+      carrera brindarán pláticas informativas y dinámicas, compartiendo detalles
+      sobre los planes de estudio, las oportunidades académicas y profesionales,
+      así como la filosofía educativa que caracteriza a la universidad. Los
+      asistentes podrán interactuar directamente con los directores, plantear
+      preguntas y aclarar dudas, lo que les permitirá tomar decisiones
+      informadas sobre su futuro académico.
+    </p>
+
+    <script>
+      const nodoTitulo = document.getElementById("titulo");
+      console.dir(nodoTitulo);
+
+      const nodoInfoPrincipal = document.getElementById("info-principal");
+      console.dir(nodoInfoPrincipal);
+    </script>
+  </body>
+</html>
