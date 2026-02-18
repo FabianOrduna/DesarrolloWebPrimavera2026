@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asincronía con HTML</title>
+  </head>
+  <body>
+    <div id="contenedor-llamada"></div>
+
+    <script>
+      function transformarProfesor(profesor) {
+        /*
+        {
+            "nombre": "Fabián",
+            "intereses_profesionales": [
+              "Desarrollo de Sofware",
+              "Inteligencia Artificial",
+              "Educación"
+            ]
+          }
+            */
+
+        let resultado =
+          "<div> <h2 style='color:green;'>" + profesor.nombre + "</h2> <ul>";
+
+        for (let i = 0; i < profesor.intereses_profesionales.length; i++) {
+          resultado += "<li>" + profesor.intereses_profesionales[i] + "</li>";
+        }
+
+        resultado += "</ul></div>";
+        return resultado;
+      }
+
+      fetch("salon.json")
+        .then((respuesta) => {
+          return respuesta.json();
+        })
+        .then((datos) => {
+          console.log(datos);
+          const contenedor = document.getElementById("contenedor-llamada");
+          contenedor.innerHTML = transformarProfesor(datos.profesor);
+        })
+        .catch((error) => {
+          console.log("Ocurrió un error al obtener los datos:", error);
+        });
+    </script>
+  </body>
+</html>
