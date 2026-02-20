@@ -6,20 +6,30 @@
     <title>Artistas Spotify</title>
   </head>
   <body>
+    <div id="informacion"></div>
+
     <script>
       function obtenerArtista() {
         const parametros = {
           method: "GET",
           headers: {
-            Authorization:
-              "Bearer BQAOsxcN73a8l4YLYEUOKZu71E9FSr2oHqy0ah27tnztlfTqH0Vn5nvcvfc5BEO8aMdixrvi9pkd9fWHjY3S0k43q-7j67zYDbOGbXB80X4X9rx_ksDEGIsotCMZvysshcREy7-MW6M",
+            Authorization: "Bearer XXX",
           },
         };
 
         fetch(
           "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
           parametros,
-        );
+        )
+          .then((respuesta) => respuesta.json())
+          .then((datos) => {
+            const contenedorInformacion =
+              document.getElementById("informacion");
+            contenedorInformacion.textContent = JSON.stringify(datos);
+          })
+          .catch((error) =>
+            console.error("Error al obtener el artista:", error),
+          );
       }
 
       obtenerArtista();
