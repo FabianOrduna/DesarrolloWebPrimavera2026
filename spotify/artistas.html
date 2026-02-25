@@ -9,6 +9,17 @@
     <div id="informacion"></div>
 
     <script>
+      function formateaArtista(artista) {
+        console.log("Dentro de formtea artista", artista);
+        const respuesta =
+          "<div><h1 style='color:red;'>" +
+          artista.name +
+          "</h1><p>" +
+          artista.popularity +
+          "</p></div>";
+        return respuesta;
+      }
+
       function obtenerArtista() {
         const parametros = {
           method: "GET",
@@ -25,7 +36,8 @@
           .then((datos) => {
             const contenedorInformacion =
               document.getElementById("informacion");
-            contenedorInformacion.textContent = JSON.stringify(datos);
+            const artistaFormateado = formateaArtista(datos);
+            contenedorInformacion.innerHTML = artistaFormateado;
           })
           .catch((error) =>
             console.error("Error al obtener el artista:", error),
