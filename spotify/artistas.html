@@ -6,20 +6,42 @@
     <title>Artistas Spotify</title>
   </head>
   <body>
+    <div id="informacion"></div>
+
     <script>
+      function formateaArtista(artista) {
+        console.log("Dentro de formtea artista", artista);
+        const respuesta =
+          "<div><h1 style='color:red;'>" +
+          artista.name +
+          "</h1><p>" +
+          artista.popularity +
+          "</p></div>";
+        return respuesta;
+      }
+
       function obtenerArtista() {
         const parametros = {
           method: "GET",
           headers: {
-            Authorization:
-              "Bearer XXXXX",
+            Authorization: "Bearer XXX",
           },
         };
 
         fetch(
           "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
           parametros,
-        );
+        )
+          .then((respuesta) => respuesta.json())
+          .then((datos) => {
+            const contenedorInformacion =
+              document.getElementById("informacion");
+            const artistaFormateado = formateaArtista(datos);
+            contenedorInformacion.innerHTML = artistaFormateado;
+          })
+          .catch((error) =>
+            console.error("Error al obtener el artista:", error),
+          );
       }
 
       obtenerArtista();
