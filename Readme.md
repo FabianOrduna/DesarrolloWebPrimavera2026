@@ -18,26 +18,26 @@ Repositorio del curso de **Desarrollo Web**, que cubre desde los fundamentos de 
 ## Contenido
 
 ### Introducción a las páginas web
-- Protocolos de comunicación.
-- Métodos GET, POST, PATCH, PUT, DELETE.
-- Códigos de respuesta.
+- ✅ Protocolos de comunicación.
+- ✅ Métodos GET, POST, PATCH, PUT, DELETE.
+- ✅ Códigos de respuesta.
 
 ### Estructura y diseño de páginas web
 - Arquitecturas conocidas.
-- HTML, CSS, Javascript.
-- Bootstrap y estilado responsivo.
+- ✅ HTML, CSS, Javascript.
+- ✅ Bootstrap y estilado responsivo.
 
 ### Recursos populares en Javascript
-- Eventos.
-- JSON.
-- Local Storage.
-- Promesas y llamadas asíncronas (`async` / `await`).
-- Fetch API.
+- ✅ Eventos.
+- ✅ JSON.
+- ✅ Local Storage.
+- ✅ Promesas y llamadas asíncronas (`async` / `await`).
+- ✅ Fetch API.
 
 ### Control de versiones
-- Git y uso de comandos básicos (`pull`, `push`, `add`, `commit`, `switch`, `stash`, `merge`).
-- Resolución de conflictos.
-- GitHub.
+- ✅ Git y uso de comandos básicos (`pull`, `push`, `add`, `commit`, `switch`, `stash`, `merge`).
+- ✅ Resolución de conflictos.
+- ✅ GitHub.
 
 ### React
 - Generación de nuevos proyectos con Vite.
@@ -55,7 +55,7 @@ Repositorio del curso de **Desarrollo Web**, que cubre desde los fundamentos de 
 - Integración con base de datos.
 
 ### Despliegue de sitios web
-- GitHub Pages.
+- ✅ GitHub Pages.
 - Render.
 
 ### Inteligencia Artificial
