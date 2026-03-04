@@ -1,5 +1,3 @@
-# Desarrollo Web – Primavera 2026
-
 Repositorio del curso de **Desarrollo Web**, que cubre desde los fundamentos de HTML, CSS y JavaScript hasta el despliegue de aplicaciones full-stack con React, FastAPI y bases de datos.
 
 ---
