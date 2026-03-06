@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from pydantic import BaseModel
 app = FastAPI()
 
 diccionario_usuarios = {
@@ -6,7 +7,27 @@ diccionario_usuarios = {
     2: { "nombre": "Samuel"}
 }
 
+# DTO: Data Transfer Object
+class UsuarioDTO(BaseModel):
+    nombre: str
+
+
 @app.post("/v1/usuario")
+def create_user_body(usuario: UsuarioDTO):
+    # Calculo el nuevo id del usuario que voy a insertar
+    id_usuario = len(diccionario_usuarios) + 1
+
+    # Creo el nuevo usuario
+    nuevo_usuario = { "nombre": usuario.nombre }
+
+    # Inserto el nuevo usuario en el diccionario de usuarios
+    diccionario_usuarios[id_usuario] = nuevo_usuario
+
+    #Regreso el nuevo usuario que acabo de insertar
+    return diccionario_usuarios[id_usuario]
+
+
+@app.post("/v1/usuario-incorrecto")
 def create_user(usuario_nombre: str):
     # Calculo el nuevo id del usuario que voy a insertar
     id_usuario = len(diccionario_usuarios) + 1
