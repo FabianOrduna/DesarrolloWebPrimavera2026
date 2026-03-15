@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fiestas</title>
+  </head>
+  <body>
+    <div id="fiestas"></div>
+    <script>
+      const url_base = "http://127.0.0.1:8000";
+
+      function leerFiestas() {
+        const url_completa = url_base + "/fiestas";
+        fetch(url_completa)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            // Renderizar las fiestas en el DOM
+            const fiestasDiv = document.getElementById("fiestas");
+            fiestasDiv.textContent = JSON.stringify(data);
+          })
+          .catch((error) => console.error("Error:", error));
+      }
+
+      // función para dar de alta una fiesta
+      function darFiestaDeAlta() {
+        // 1. Obtener los campos del formulario (nombre, fecha, lugar) - hint document.getElementById
+        // 2. Hacer llamada POST /fiestas y mandarle en el body el JSON.stringyfy del objeto con los datos del formulario
+        // 3. Poner una alterta si fue exitoso (verde) o no (rojo)
+      }
+
+      leerFiestas();
+    </script>
+  </body>
+</html>
