@@ -1,7 +1,5 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from utils import generar_guid
-from models import FiestaDTO, InvitadoDTO
 
 app = FastAPI()
 origins = ["*"] # Lista de orígenes permitidos para CORS, en este caso se permite cualquier origen. En un entorno de producción, es indispensable especificar los orígenes permitidos para mejorar la seguridad.
