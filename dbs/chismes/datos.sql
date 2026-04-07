@@ -1,0 +1,47 @@
+CREATE TABLE chismes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    quien_dijo TEXT NOT NULL,
+    sobre_quien TEXT NOT NULL,
+    chisme TEXT NOT NULL,
+    fecha DATE NOT NULL,
+    monto_silencio REAL DEFAULT 0,
+    es_real BOOLEAN DEFAULT 0,
+    nivel_gravedad INTEGER CHECK(nivel_gravedad BETWEEN 1 AND 5),
+    categoria TEXT,
+    lugar TEXT,
+    testigos INTEGER DEFAULT 0
+);
+
+
+INSERT INTO chismes (quien_dijo, sobre_quien, chisme, fecha, monto_silencio, es_real, nivel_gravedad, categoria, lugar, testigos)
+VALUES
+('Ana', 'Luis', 'Que Luis llegó tarde tres días seguidos', '2024-01-05', 200, 1, 2, 'trabajo', 'oficina', 1),
+('Pedro', 'María', 'Que María está saliendo con alguien del trabajo', '2024-02-10', 0, 0, 3, 'amor', 'cafetería', 2),
+('Lucía', 'Carlos', 'Que Carlos ganó la lotería', '2023-12-22', 500, 0, 4, 'dinero', 'parque', 3),
+('Sofía', 'Ana', 'Que Ana planea renunciar', '2024-03-01', 300, 1, 3, 'trabajo', 'oficina', 0),
+('Diego', 'Pedro', 'Que Pedro chocó su coche', '2023-11-15', 150, 1, 2, 'accidente', 'calle', 1),
+('María', 'Lucía', 'Que Lucía se va a casar', '2024-04-12', 0, 1, 5, 'familia', 'restaurante', 4),
+('Luis', 'Sofía', 'Que Sofía recibió un ascenso', '2024-05-20', 0, 1, 3, 'trabajo', 'oficina', 2),
+('Carlos', 'Diego', 'Que Diego perdió su celular', '2024-01-18', 50, 1, 1, 'cotidiano', 'metro', 1),
+('Ana', 'María', 'Que María está buscando mudarse', '2023-10-30', 0, 1, 2, 'hogar', 'parque', 0),
+('Pedro', 'Luis', 'Que Luis está endeudado', '2024-02-25', 700, 0, 4, 'dinero', 'bar', 3),
+('Lucía', 'Sofía', 'Que Sofía canceló un viaje', '2024-03-15', 0, 1, 2, 'viajes', 'oficina', 2),
+('Sofía', 'Carlos', 'Que Carlos está escribiendo un libro', '2024-04-01', 0, 1, 3, 'creatividad', 'casa', 1),
+('Diego', 'Ana', 'Que Ana adoptó un perro', '2023-09-12', 0, 1, 1, 'mascotas', 'parque', 2),
+('María', 'Pedro', 'Que Pedro está tomando clases de baile', '2024-01-22', 0, 1, 2, 'hobby', 'estudio', 1),
+('Luis', 'Lucía', 'Que Lucía abrió un negocio', '2024-05-05', 400, 1, 4, 'dinero', 'centro', 3),
+('Carlos', 'María', 'Que María ganó un concurso', '2023-12-01', 0, 1, 3, 'logros', 'auditorio', 4),
+('Ana', 'Sofía', 'Que Sofía está escribiendo poesía', '2024-02-14', 0, 1, 1, 'creatividad', 'casa', 0),
+('Pedro', 'Carlos', 'Que Carlos tuvo una discusión fuerte', '2024-03-28', 250, 0, 4, 'conflicto', 'oficina', 2),
+('Lucía', 'Diego', 'Que Diego está buscando trabajo', '2023-11-20', 0, 1, 3, 'trabajo', 'cafetería', 1),
+('Sofía', 'Luis', 'Que Luis está entrenando para un maratón', '2024-04-18', 0, 1, 2, 'deporte', 'parque', 3),
+('Diego', 'Ana', 'Que Ana está estudiando programación', '2024-01-10', 0, 1, 2, 'estudios', 'biblioteca', 0),
+('María', 'Pedro', 'Que Pedro está invirtiendo en criptomonedas', '2024-02-08', 600, 0, 4, 'dinero', 'bar', 2),
+('Luis', 'Lucía', 'Que Lucía viajó en secreto', '2023-12-28', 300, 0, 3, 'viajes', 'aeropuerto', 1),
+('Carlos', 'Sofía', 'Que Sofía está organizando un evento', '2024-03-05', 0, 1, 3, 'trabajo', 'oficina', 4),
+('Ana', 'Diego', 'Que Diego está escribiendo un guion', '2024-04-22', 0, 1, 2, 'creatividad', 'casa', 1),
+('Pedro', 'María', 'Que María está aprendiendo francés', '2023-10-18', 0, 1, 2, 'estudios', 'escuela', 2),
+('Lucía', 'Luis', 'Que Luis compró una moto', '2024-05-12', 0, 1, 3, 'compras', 'tienda', 1),
+('Sofía', 'Carlos', 'Que Carlos está enfermo', '2024-01-30', 100, 1, 3, 'salud', 'casa', 2),
+('Diego', 'Ana', 'Que Ana está planeando un viaje largo', '2024-02-27', 0, 1, 3, 'viajes', 'agencia', 1),
+('María', 'Pedro', 'Que Pedro está escribiendo un blog', '2024-03-11', 0, 1, 2, 'creatividad', 'casa', 0);
