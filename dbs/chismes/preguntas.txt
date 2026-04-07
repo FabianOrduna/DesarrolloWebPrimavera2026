@@ -1,0 +1,47 @@
+Obtén todos los chismes registrados
+
+Muestra solo los chismes reales
+
+Encuentra los chismes inventados
+
+Chismes con monto de silencio mayor a 500
+
+Chismes con gravedad mayor o igual a 4
+
+Chismes sobre una persona específica llamada Ana
+
+Chismes contados por persona que los dijo
+
+Chismes contados por persona involucrada
+
+Chismes ocurridos entre dos fechas
+
+Cuántos chismes se dijeron por año
+
+Cuántos chismes se dijeron por mes
+
+Chismes agrupados por año y mes
+
+Años donde se dijeron más de 10 chismes
+
+Suma total de dinero pagado por silencio
+
+Promedio del monto de silencio
+
+Promedio de gravedad por categoría
+
+Categorías con más de 5 chismes
+
+Personas que recibieron más de 1000 en pagos de silencio
+
+Chismes con testigos distintos de cero
+
+Chismes de gravedad entre 2 y 4
+
+Chismes de la categoría trabajo
+
+Chismes contados por lugar
+
+Lugares donde se dijeron más de 3 chismes
+
+Personas que dijeron chismes con promedio de gravedad mayor a 3
