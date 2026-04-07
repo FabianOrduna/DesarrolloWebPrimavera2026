@@ -1,0 +1,55 @@
+CREATE TABLE Persona (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL,
+    fecha_nacimiento TEXT,
+    total_hermanos INTEGER,
+    estado TEXT,
+    musica_favorita TEXT,
+    soltero BOOLEAN
+);
+
+
+INSERT INTO Persona (nombre, fecha_nacimiento, total_hermanos, estado, musica_favorita, soltero)
+VALUES ('Lucía', '1995-04-12', 2, 'CDMX', 'Rock', TRUE);
+
+INSERT INTO Persona (nombre, fecha_nacimiento, total_hermanos, estado, musica_favorita, soltero)
+VALUES ('Javier', '1988-11-03', 1, 'Jalisco', 'Pop', FALSE);
+
+INSERT INTO Persona (nombre, fecha_nacimiento, total_hermanos, estado, musica_favorita, soltero)
+VALUES ('Elena', '1992-07-19', 3, 'Nuevo León', 'Jazz', TRUE);
+
+INSERT INTO Persona (nombre, fecha_nacimiento, total_hermanos, estado, musica_favorita, soltero)
+VALUES ('Roberto', '1985-02-28', 0, 'Puebla', 'Clásica', FALSE);
+
+INSERT INTO Persona (nombre, fecha_nacimiento, total_hermanos, estado, musica_favorita, soltero)
+VALUES ('Camila', '1999-09-14', 2, 'Yucatán', 'Indie', TRUE);
+
+INSERT INTO Persona (nombre, fecha_nacimiento, total_hermanos, estado, musica_favorita, soltero)
+VALUES ('Héctor', '1990-01-22', 4, 'CDMX', 'Metal', FALSE);
+
+INSERT INTO Persona (nombre, fecha_nacimiento, total_hermanos, estado, musica_favorita, soltero)
+VALUES ('Paola', '1997-03-30', 1, 'Veracruz', 'Reggaetón', TRUE);
+
+INSERT INTO Persona (nombre, fecha_nacimiento, total_hermanos, estado, musica_favorita, soltero)
+VALUES ('Luis', '1983-12-05', 2, 'Sonora', 'Salsa', FALSE);
+
+INSERT INTO Persona (nombre, fecha_nacimiento, total_hermanos, estado, musica_favorita, soltero)
+VALUES ('Daniela', '1994-06-17', 0, 'Querétaro', 'Pop', TRUE);
+
+INSERT INTO Persona (nombre, fecha_nacimiento, total_hermanos, estado, musica_favorita, soltero)
+VALUES ('Iván', '1989-10-09', 3, 'Chiapas', 'Rock', FALSE);
+
+INSERT INTO Persona (nombre, fecha_nacimiento, total_hermanos, estado, musica_favorita, soltero)
+VALUES ('Renata', '1996-08-25', 2, 'CDMX', 'Electrónica', TRUE);
+
+INSERT INTO Persona (nombre, fecha_nacimiento, total_hermanos, estado, musica_favorita, soltero)
+VALUES ('Alberto', '1987-05-11', 1, 'Hidalgo', 'Jazz', FALSE);
+
+INSERT INTO Persona (nombre, fecha_nacimiento, total_hermanos, estado, musica_favorita, soltero)
+VALUES ('Sofía', '1993-02-07', 2, 'Tabasco', 'Indie', TRUE);
+
+INSERT INTO Persona (nombre, fecha_nacimiento, total_hermanos, estado, musica_favorita, soltero)
+VALUES ('Gabriel', '1991-09-21', 0, 'Morelos', 'Clásica', FALSE);
+
+INSERT INTO Persona (nombre, fecha_nacimiento, total_hermanos, estado, musica_favorita, soltero)
+VALUES ('Valeria', '1998-04-03', 1, 'CDMX', 'Rock', TRUE);

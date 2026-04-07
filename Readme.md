@@ -49,12 +49,12 @@ Repositorio del curso de **Desarrollo Web**, que cubre desde los fundamentos de 
 - Consultas a tablas, agrupamiento, filtrado y juntas entre tablas.
 
 ### Creación de APIs con Python
-- Creación de endpoints en FastAPI con métodos GET, POST, PUT, DELETE.
+- ✅ Creación de endpoints en FastAPI con métodos GET, POST, PUT, DELETE.
 - Integración con base de datos.
 
 ### Despliegue de sitios web
 - ✅ GitHub Pages.
-- Render.
+- ✅ Render.
 
 ### Inteligencia Artificial
 - Chats para generación de código y optimización con ChatGPT, Claude, Gemini, etc.
