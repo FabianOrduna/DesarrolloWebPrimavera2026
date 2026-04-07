@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mascotas</title>
+  </head>
+  <body>
+    <h1>Adopta una mascota</h1>
+
+    <h2>Solicitudes actuales</h2>
+    <button onclick="cargaSolicitudes()">Cargar solicitudes</button>
+    <div id="solicitudes"></div>
+
+    <script>
+      const baseUrl = "https://desarrollowebprimavera2026-1.onrender.com";
+      function cargaSolicitudes() {
+        const solicitudesURL = `${baseUrl}/solicitudes`;
+        fetch(solicitudesURL)
+          .then((response) => response.json())
+          .then((data) => {
+            const solicitudesDiv = document.getElementById("solicitudes");
+            solicitudesDiv.innerHTML = "";
+            data.forEach((solicitud) => {
+              const solicitudElement = document.createElement("div");
+              /*
+              "id": "ec371798-e3c0-4d2a-984d-f63c82a2028b",
+                "nombrePersona": "Fabián",
+                "mascotaDeseada": "Perro",
+                "motivo": "Me gustan los perros",
+                "estado": "pendiente"
+                */
+              solicitudElement.innerHTML = `
+                <h3>${solicitud.nombrePersona}</h3>
+                <p>Tipo de mascota: ${solicitud.mascotaDeseada}</p>
+                <p>Motivo: ${solicitud.motivo}</p>
+                <p>Estado: ${solicitud.estado}</p>
+              `;
+              solicitudesDiv.appendChild(solicitudElement);
+            });
+          })
+          .catch((error) => {
+            console.error("Error al cargar las solicitudes:", error);
+          });
+      }
+    </script>
+  </body>
+</html>
