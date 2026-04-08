@@ -1,0 +1,75 @@
+1. Obtén todos los chismes registrados
+SELECT * FROM chismes
+
+2. Muestra solo los chismes reales
+SELECT * FROM chismes WHERE es_real = 1
+
+3. Encuentra los chismes inventados
+SELECT * FROM chismes WHERE es_real = 0
+SELECT * FROM chismes WHERE es_real <> 1;
+
+4. Chismes con monto de silencio mayor a 500
+SELECT * FROM chismes WHERE monto_silencio > 500
+
+5. Chismes con gravedad mayor o igual a 4
+SELECT quien_dijo, sobre_quien, chisme FROM chismes WHERE nivel_gravedad >= 4
+
+
+6. Chismes sobre una persona específica llamada Ana
+SELECT sobre_quien, chisme, quien_dijo FROM chismes WHERE sobre_quien = 'Ana'
+
+7. Chismes ocurridos entre dos fechas
+SELECT chisme, fecha FROM chismes WHERE fecha BETWEEN '2024-01-01' AND '2024-09-31'
+
+8. Cuántos chismes se dijeron por año
+SELECT strftime('%Y', fecha) AS anio, COUNT(*) as total_chismes
+FROM chismes
+GROUP BY strftime('%Y', fecha)
+
+9. Cuántos chismes se dijeron por año solo en enero
+SELECT strftime('%Y', fecha) AS anio, COUNT(*) as total_chismes_en_enero
+FROM chismes
+WHERE strftime('%m', fecha) = '01'
+GROUP BY strftime('%Y', fecha)
+
+
+10. Chismes agrupados por año y mes
+SELECT strftime('%Y', fecha) AS anio, 
+strftime('%m', fecha) AS mes, COUNT(*) as todos_chismes
+FROM chismes
+WHERE strftime('%m', fecha) < '03'
+GROUP BY strftime('%Y', fecha), strftime('%m', fecha) 
+
+
+11. Años donde se dijeron más de 12 chismes
+SELECT strftime('%Y', fecha), COUNT(chisme) AS total_chismes
+FROM chismes
+GROUP BY strftime('%Y', fecha)
+HAVING total_chismes > 12
+
+12. Suma total de dinero pagado por silencio
+SELECT strftime('%m', fecha) as anio, SUM(monto_silencio) as total_pagado
+FROM chismes
+GROUP BY anio
+HAVING total_pagado > 900
+
+
+13. Promedio del monto de silencio
+
+14. Promedio de gravedad por categoría
+
+15. Categorías con más de 5 chismes
+
+16. Personas que recibieron más de 1000 en pagos de silencio
+
+17. Chismes con testigos distintos de cero
+
+18. Chismes de gravedad entre 2 y 4
+
+19. Chismes de la categoría trabajo
+
+20. Chismes contados por lugar
+
+21. Lugares donde se dijeron más de 3 chismes
+
+22. Personas que dijeron chismes con promedio de gravedad mayor a 3
