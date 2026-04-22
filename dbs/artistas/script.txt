@@ -1,0 +1,36 @@
+-- ============================================
+-- TABLA: Artistas
+-- ============================================
+DROP TABLE IF EXISTS Artistas;
+
+CREATE TABLE Artistas (
+    id INTEGER PRIMARY KEY,
+    nombre_artista TEXT NOT NULL
+);
+
+-- Inserts
+INSERT INTO Artistas (id, nombre_artista) VALUES
+(1, 'Bad Bunny'),
+(2, 'Dua Lipa'),
+(3, 'Peso Pluma'),
+(4, 'Rosalía');
+
+
+-- ============================================
+-- TABLA: Eventos
+-- ============================================
+DROP TABLE IF EXISTS Eventos;
+
+CREATE TABLE Eventos (
+    id INTEGER PRIMARY KEY,
+    artista_id INTEGER,
+    nombre_evento TEXT NOT NULL,
+    FOREIGN KEY (artista_id) REFERENCES Artistas(id)
+);
+
+-- Inserts
+INSERT INTO Eventos (id, artista_id, nombre_evento) VALUES
+(101, 1, 'Festival Flow 2024'),
+(102, 1, 'Sunset Party'),
+(103, 3, 'Latin Beats Night'),
+(104, 5, 'Electro Fest');  -- artista_id 5 NO existe en Artistas
