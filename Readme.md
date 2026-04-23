@@ -38,19 +38,19 @@ Repositorio del curso de **Desarrollo Web**, que cubre desde los fundamentos de 
 - ✅ GitHub.
 
 ### React
-- Generación de nuevos proyectos con Vite.
-- Componentes.
+- ✅ Generación de nuevos proyectos con Vite.
+- ✅ Componentes.
 - `useState`.
 - `useEffect`.
 
 ### Bases de Datos
-- Introducción básica a las bases de datos.
+- ✅ Introducción básica a las bases de datos.
 - Diagrama entidad-vínculo.
-- Consultas a tablas, agrupamiento, filtrado y juntas entre tablas.
+- ✅ Consultas a tablas, agrupamiento, filtrado y juntas entre tablas.
 
 ### Creación de APIs con Python
 - ✅ Creación de endpoints en FastAPI con métodos GET, POST, PUT, DELETE.
-- Integración con base de datos.
+- ✅ Integración con base de datos.
 
 ### Despliegue de sitios web
 - ✅ GitHub Pages.
