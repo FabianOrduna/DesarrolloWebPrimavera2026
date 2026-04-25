@@ -1,0 +1,21 @@
+1. total de usuarios por país ---> aquí es necesario mostras el nombre del país y el total de usuarios como número
+
+2. número de actores registrados por película ---> mostrar el nombre de la película y el total de actores
+
+3. mostrar las películas en las que haya dos o más actores ---> mostrar el nombre de la película únicamente (tip: la respuesta de la consulta anterior te puede ayudar a contestar esta)
+
+4. total de usuarios registrados por año -> mostrar el año a cuatro dígitos YYYY y el total de usuarios
+
+5. total de usuarios registrados por país y por año -> mostrar el país, el año y el total de personas registradas en ese país y en ese año
+
+6. peliculas por actor -> debe mostrar el nombre del actor y el nombre de la película
+
+7. los actores que aparezcan en la película "Los Juegos del Hambre" -> esto debe de ser filtrado por el texto "Los Juegos del Hambre" en tu query. Debes hacer JOINS de las tablas actores, pelicula actor y pelicula 
+
+8. ¿Cuántos minutos ha empleado cada usuario en ver las películas? -> nombre del usuario y la cantidad de minutos acumulada entre todas las películas
+
+9. Películas que no hayan tenido reproducciones
+
+reto:
+
+10. actores de las películas que hayan sido vistas por usuarios de España
