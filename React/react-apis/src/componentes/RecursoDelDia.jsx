@@ -217,26 +217,7 @@ export function RecursoDelDia({
   url,
   estilo = "default",
 }) {
-  const cfg = CONFIGURACION_ESTILOS[estilo];
-
-  if (!cfg) {
-    if (import.meta.env.DEV) {
-      console.warn(
-        `RecursoDelDia: estilo "${estilo}" no reconocido. Usando "default". ` +
-          `Opciones válidas: ${Object.keys(CONFIGURACION_ESTILOS).join(", ")}`
-      );
-    }
-    return (
-      <RecursoDelDia
-        fecha={fecha}
-        explicacion={explicacion}
-        tipoContenido={tipoContenido}
-        titulo={titulo}
-        url={url}
-        estilo="default"
-      />
-    );
-  }
+  const cfg = CONFIGURACION_ESTILOS[estilo] ?? CONFIGURACION_ESTILOS.default;
 
   return (
     <div className={cfg.contenedor.clases} style={cfg.contenedor.estilos}>
