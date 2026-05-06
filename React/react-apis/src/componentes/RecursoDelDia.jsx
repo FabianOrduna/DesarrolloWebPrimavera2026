@@ -1,3 +1,5 @@
+import { formatearFecha } from "./utils/formatearFecha";
+
 export function RecursoDelDia({
   fecha,
   explicacion,
@@ -18,26 +20,6 @@ export function RecursoDelDia({
   );
 }
 
-// funcion para modificar como se muestra la fecha de un formato YYYY-MM-DD a un formato en texto
-export function formatearFecha(fecha) {
-  const meses = [
-    "Enero",
-    "Febrero",
-    "Marzo",
-    "Abril",
-    "Mayo",
-    "Junio",
-    "Julio",
-    "Agosto",
-    "Septiembre",
-    "Octubre",
-    "Noviembre",
-    "Diciembre",
-  ];
-  const [anio, mes, dia] = fecha.split("-");
-  return `${dia} de ${meses[parseInt(mes) - 1]} de ${anio}`;
-}
-
 // componente alternativo a RecursoDelDia que sea colorido y tenga un diseño profesional.
 export function RecursoDelDiaColorido({
   fecha,
@@ -47,23 +29,20 @@ export function RecursoDelDiaColorido({
   url,
 }) {
   return (
-    <div
-      style={{
-        backgroundColor: "#f0f0f0",
-        padding: "20px",
-        borderRadius: "10px",
-        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-      }}
-    >
-      <h2 style={{ color: "#333" }}>{titulo}</h2>
-      <p style={{ color: "#666" }}>{explicacion}</p>
-      <p style={{ color: "#999" }}>Fecha: {formatearFecha(fecha)}</p>
-      <p style={{ color: "#999" }}>Tipo de Contenido: {tipoContenido}</p>
+    <div className="card bg-light p-4 rounded-4 shadow-sm border-0 mt-3">
+      <h2 className="card-title text-dark h4 mb-3">{titulo}</h2>
+      <p className="card-text text-secondary mb-3">{explicacion}</p>
+      <p className="text-muted mb-1">
+        <span className="fw-semibold">Fecha:</span> {formatearFecha(fecha)}
+      </p>
+      <p className="text-muted mb-3">
+        <span className="fw-semibold">Tipo de Contenido:</span> {tipoContenido}
+      </p>
       <a
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        style={{ color: "#007BFF", textDecoration: "none" }}
+        className="btn btn-primary align-self-start"
       >
         Ver Recurso
       </a>
